@@ -24,10 +24,14 @@ print(X_train, X)
 regressor = LinearRegression()
 #Train the model
 regressor.fit(X_train, y_train)
+#this .fit gives us the equation of the best fit line and later when we plot,
+#we plug the X_train x components into the x of y = b +bx, to get y_pred. Which
+# point on the best fit line. To view how good the line is, view it on the test
+#set
 
-y_pred = regressor.predict(X_test)
+#y_pred = regressor.predict(X_test)
 
-print(y_pred)
+#print(y_pred)
 
 plt.scatter(X_train, y_train, color = "red")
 plt.plot(X_train, regressor.predict(X_train), color = "blue")
