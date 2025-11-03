@@ -48,5 +48,3 @@ plt.title('Salary vs Exp (Training Set)')
 plt.xlabel('Years of Exp')
 plt.ylabel('Salary')
 plt.show()
-
-
