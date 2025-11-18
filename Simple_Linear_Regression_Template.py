@@ -17,9 +17,9 @@ y = dataset.iloc[:, -1].values
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
 
-print(X_train, X)
+#print(X_train, X)
 
-#Regression is used hen you have to predict a continuous real value
+#Regression is used when you have to predict a continuous real value
 #like a salary. Classification is wen you have to predict a category
 regressor = LinearRegression()
 #Train the model
@@ -29,9 +29,9 @@ regressor.fit(X_train, y_train)
 # point on the best fit line. To view how good the line is, view it on the test
 #set
 
-#y_pred = regressor.predict(X_test)
+y_pred = regressor.predict(X_test)
 
-#print(y_pred)
+print(y_pred)
 
 plt.scatter(X_train, y_train, color = "red")
 plt.plot(X_train, regressor.predict(X_train), color = "blue")

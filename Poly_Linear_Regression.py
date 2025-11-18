@@ -16,8 +16,10 @@ lin_reg.fit(X, y)
 
 #if poly is selected, then you can use this as a config
 #degree=2 is quadratic, 3 = cubic, etc...
-poly_reg = PolynomialFeatures(degree=4)
+poly_reg = PolynomialFeatures(degree=2)
 X_poly = poly_reg.fit_transform(X)
+
+print(X_poly)
 
 lin_reg_2 = LinearRegression()
 lin_reg_2.fit(X_poly, y)
@@ -39,4 +41,4 @@ plt.show()
 #predicts using linear regression at an x point:6.5
 lin_reg.predict([[6.5]])
 
-lin_reg_2.predict(poly_reg.fit_transform([[6.5]])
+lin_reg_2.predict(poly_reg.fit_transform([[6.5]]))
